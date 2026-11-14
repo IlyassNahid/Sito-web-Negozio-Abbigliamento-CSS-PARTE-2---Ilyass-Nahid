@@ -1,0 +1,124 @@
+/* selettori di elemento */
+body {
+    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding-top: 70px; /* spazio per la navbar fissa */
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: darkslategray;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    color: darkslategray;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+}
+
+/* navbar fissa in alto */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav a:hover {
+    background-color: crimson;
+}
+
+/* selettori di classe */
+.sottotitolo {
+    text-align: center;
+    font-style: italic;
+}
+
+/* le 3 card una accanto all'altra */
+.contenitore {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: white;
+    width: 30%;
+    text-align: center;
+}
+
+.card a {
+    color: crimson;
+    font-weight: bold;
+}
+
+/* pagina articolo: immagine a sinistra, lista a destra */
+.articolo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.articolo img {
+    width: 40%;
+}
+
+.articolo ul {
+    width: 40%;
+}
+
+.descrizione {
+    background-color: white;
+    padding: 20px;
+}
+
+/* responsive: sotto i 768px gli elementi vanno uno sotto l'altro */
+@media (max-width: 768px) {
+    .contenitore {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .articolo {
+        flex-direction: column;
+    }
+
+    .articolo img {
+        width: 90%;
+    }
+
+    .articolo ul {
+        width: 90%;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+}
